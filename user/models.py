@@ -14,7 +14,7 @@ class User(AbstractUser):
     """docstring for User"""
     email               = models.EmailField(verbose_name='Email Address', unique=True)
     name                = models.CharField(max_length=50)
-    Coins               = models.DecimalField(decimal_places=2, max_digits= 9, default=100000)
+    Coins               = models.DecimalField(decimal_places=2, max_digits= 9, default=0)
     alert               = models.CharField(max_length=100, default='', null=True, blank=True)
     is_teacher          = models.BooleanField(default=False)
     is_student          = models.BooleanField(default=False)
